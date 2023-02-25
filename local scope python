@@ -1,0 +1,24 @@
+#lex_auth_012693816779112448160
+
+#Price per litre of fuel = 70
+#Mileage of the bus in km/litre of fuel = 10
+#Price(Rs) per ticket = 80
+
+def calculate(distance,no_of_passengers):
+    ppl=70
+    mil=10
+    ppt=80
+    earning = ppt*no_of_passengers
+    spend=(distance/mil)*ppl
+    profit=earning-spend
+    if(earning>spend):
+        return profit
+    return -1
+    #Remove pass and write your logic here
+
+
+
+#Provide different values for distance, no_of_passenger and test your program
+distance=20
+no_of_passengers=50
+print(calculate(distance,no_of_passengers))
