@@ -1,0 +1,30 @@
+#lex_auth_0127382164803993601239
+
+#This verification is based on string match.
+
+def sum_of_numbers(list_of_num,filter_func=None):
+    if(filter_func==None):
+        return sum(list_of_num)
+    else:
+        return sum(filter_func)
+    #Remove pass and write the logic here
+
+def even(data):
+    list1=[]
+    for i in data:
+        if(i%2==0):
+            list1.append(i)
+    return list1
+    #Remove pass and write the logic here
+
+def odd(data):
+    list1=[]
+    for i in data:
+        if(i%2!=0):
+            list1.append(i)
+    return list1
+    #Remove pass and write the logic here
+
+sample_data = range(1,11)
+data=[1,2,3,4,5]
+print(sum_of_numbers(sample_data,None))
