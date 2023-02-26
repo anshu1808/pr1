@@ -1,0 +1,14 @@
+#lex_auth_0127382206342184961397
+from collections import Counter
+def check_anagram(data1,data2):
+    #start writing your code here
+    d1=data1.upper()
+    d2=data2.upper()
+    for i in d1:
+        if(i==d2[d1.index(i)]):
+            return False
+    if(Counter(d1)==Counter(d2)):
+         return True
+    return False
+
+print(check_anagram("silent","listen"))
