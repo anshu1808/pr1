@@ -1,0 +1,54 @@
+#lex_auth_012694465248329728100
+
+def validate_name(name):
+    #Start writing your code here
+    if(not name.isalpha()):
+        return False
+    else:
+        if(len(name)>0 and len(name)<=15):
+            return True
+        return False
+
+def validate_phone_no(phno):
+    #Start writing your code here
+    k=str(phno)
+    if(not str(phno).isdigit()):
+        return False
+    elif(k[0]==k[1]==k[2]==k[3]==k[4]==k[5]==k[6]==k[7]==k[8]==k[9]):
+        return False
+    else:
+        if(len(str(phno))==10):
+            return True
+        return False
+        
+
+def validate_email_id(email_id):
+    #Start writing your code here
+    c=email_id.count('@')
+    c1=email_id.count(".com")
+    if('@' in email_id and email_id.endswith(".com")):
+        if('gmail' in email_id or 'yahoo' in email_id or 'hotmail' in email_id):
+            if(c==1 and c1==1):
+                return True
+    return False
+
+def validate_all(name,phone_no,email_id):
+    #Start writing your code here
+    if(validate_name(name)==True and validate_phone_no(phone_no)==True and validate_email_id(email_id)==True):
+        print("All the details are valid")
+    elif(validate_phone_no(phone_no)==True and validate_email_id(email_id)==True):
+        print("Invalid Name")
+    elif(validate_phone_no(phone_no)==True and validate_name(name)==True):
+        print("Invalid email id")
+    else:
+        print("Invalid phone number")       
+    # Use the below given print statements to display appropriate messages
+    # Also, do not modify them for verification to work
+    #print("Invalid Name")
+    #print("Invalid phone number")
+    #print("Invalid email id")
+    #print("All the details are valid")
+
+#Provide different values for name, phone_no and email_id and test your program
+#print(validate_name("Harry@123"))
+validate_all("Harry@123", "9988776655", "harry@gmail.com")
